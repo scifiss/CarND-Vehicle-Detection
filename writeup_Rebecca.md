@@ -10,10 +10,10 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
-[image0]: ./examples/exampleCarNNoncar.jpg
-[image1]: ./examples/exploreColorspaces_LAB_YCrCb.jpg
-[image2]: ./examples/exploreColorspaces_RGB_HSV
-[image3]: ./examples/HOG_example.jpg
+[image0]: ./output_images/exampleCarNNoncar.jpg
+[image1]: ./output_images/exploreColorspaces_LAB_YCrCb.jpg
+[image2]: ./output_images/exploreColorspaces_RGB_HSV
+[image3]: ./output_images/HOG_example.jpg
 
 [image9]: ./examples/sliding_windows.jpg
 [image4]: ./examples/sliding_window.jpg
