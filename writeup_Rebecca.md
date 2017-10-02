@@ -60,12 +60,14 @@ Here is an example using the 'LAB' and `YCrCb` color space
 I then tried the skimage.hog() with HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`
 
 ![alt text][image3]
+
 As is seen, LAB-L, all RGB, HSV-V, YCrCb-Y provide good representations to most car structures.
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
 I tried various combinations of parameters, with pixels_per_cell from 8 to 16 and cells_per_block from 2 to 4 on Y channel of YCrCb colorspace. 
 ![alt text][image4]
+
 I find `orientations=9`, `pixels_per_cell` at a size of no bigger than `(8, 8)`  can conserve the spatial structure of a car. 
 
 pixels_per_cell seems not a sensitive parameter to the extracted feature, but the number has a great impact to the final feature vector size. `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)` gives (7,7,2,2,9) and `pixels_per_cell=(8, 8)` and `cells_per_block=(4, 4)` gives (5,5,4,4,9). 
@@ -79,9 +81,9 @@ The trying of features are coded in 'featureExtraction.py'.
 
 I trained a linear SVM using C=0.1,1, and 10,with all channels from HOG features. It turns out all Cs produces a same accuracy (0.989302). The code is between line 24 and 40 in 'classifierTraiig.py'. I also tried `rbf` as the kernel, which gives a higher accuracy (0.991). 
 
-###Sliding Window Search
+### S liding Window Search
 
-####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+#### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
 The searching window should move in the image, changing both positions and sizes in the area where a car could appear (y<=656 and y>=400).
  
