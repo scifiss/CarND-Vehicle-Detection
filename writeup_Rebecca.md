@@ -27,6 +27,7 @@ The goals / steps of this project are the following:
 [image11]: ./output_images/CarsInVideo_heat7.jpg
 [image12]: ./output_images/CarsInVideo_heat25.jpg
 [image13]: ./output_images/CarsInVideo_heat38.jpg
+[image16]: ./output_images/findingCars_fun_heat_6pics.jpg
 [video1]: ./project_video_out.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -138,6 +139,8 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ![alt text][image12]
 ![alt text][image13]
 
+Here are the results from 6 random frames in the video. From the left to the right: image with sliding windows, heat map, labeled map, and image with targeted windows
+![alt text][image16]
 
 More results are saved in (./funPics)
 ---
