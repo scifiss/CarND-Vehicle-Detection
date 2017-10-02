@@ -31,7 +31,7 @@ spatial_feat = True # Spatial features on or off
 hist_feat = True # Histogram features on or off
 hog_feat = True # HOG features on or off
 
-def process_image(img):
+def process_image2(img):
     foundboxes=[]
     foundAllboxes=[]
     for i in np.linspace(0,10,5):
