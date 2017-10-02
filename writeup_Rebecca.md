@@ -27,18 +27,18 @@ The goals / steps of this project are the following:
 [image11]: ./output_images/CarsInVideo_heat7.jpg
 [image12]: ./output_images/CarsInVideo_heat25.jpg
 [image13]: ./output_images/CarsInVideo_heat38.jpg
-[video1]: ./project_video.mp4
+[video1]: ./project_video_out.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 You're reading it!
 
-###Histogram of Oriented Gradients (HOG)
+### Histogram of Oriented Gradients (HOG)
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
@@ -95,6 +95,7 @@ The first approach is to try windows with different starting positions and sizes
 Another approach is to use scales to change the window sizes, implemented in `CarFinding.py`, using function `find_cars()` in funLib.py. There are 11 scales from 1.5 to 2.5. Results for same images are shown here.
 ![alt text][image8]  
 ![alt text][image9]
+
 Many trials and errors went through with getting a proper scale for windows searching. The script is robust unless a car is cut in the image.
 After this, a heat map is applied to get overlapped windows, and a threshold is applied to select only the area of heat higher than the threshold.
 ```
@@ -106,7 +107,8 @@ After this, a heat map is applied to get overlapped windows, and a threshold is 
 ```
 
 The 2nd approach offers more densly windows, so the threshold to the heat map is higher than the 1st approach.
-####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
+
+#### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Ultimately I searched using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. They are implemented between line 55 and 107 in 'funLib.py'. Here are some example images:
 
@@ -133,6 +135,7 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ![alt text][image11]
 ![alt text][image12]
 ![alt text][image13]
+
 
 More results are saved in (./funPics)
 ---
